@@ -5,8 +5,15 @@ void main(void)
 	TimeLineClock clock;
 	clock.Init();
 	clock.Start();
-	clock.SetFPS(60);
-	clock.SetScale(1);
+
+	int32 nFps;
+	float32 fScale;
+	cout << "设置fps：";
+	cin >> nFps;
+	cout << "设置速率：";
+	cin >> fScale;
+	clock.SetFPS(nFps);
+	clock.SetScale(fScale);
 
 	int32 count = 0;
 	float64 dt;
@@ -20,7 +27,7 @@ void main(void)
 			count++;
 			if(count >= clock.GetFPS())
 			{
-				cout << "one second" << endl;
+				cout << "one second pass" << endl;
 				count = 0;
 			}
 		}
