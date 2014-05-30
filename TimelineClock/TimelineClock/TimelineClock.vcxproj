@@ -80,12 +80,12 @@
   <ItemGroup>
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TimeLineClock.cpp" />
+    <ClCompile Include="TimelineClock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
     <ClInclude Include="Log.h" />
-    <ClInclude Include="TimeLineClock.h" />
+    <ClInclude Include="TimelineClock.h" />
     <ClInclude Include="TypeDef.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

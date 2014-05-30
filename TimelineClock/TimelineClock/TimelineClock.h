@@ -4,11 +4,11 @@
 #include "TypeDef.h"
 #include "Log.h"
 
-class TimeLineClock
+class TimelineClock
 {
 public:
-	TimeLineClock();
-	~TimeLineClock();
+	TimelineClock();
+	~TimelineClock();
 
 	bool Init(int32 framePerSecond = 60);
 	void Start();

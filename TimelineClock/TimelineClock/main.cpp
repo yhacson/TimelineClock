@@ -1,8 +1,8 @@
-#include "TimeLineClock.h"
+#include "TimelineClock.h"
 
 void main(void)
 {
-	TimeLineClock clock;
+	TimelineClock clock;
 	clock.Init();
 	clock.Start();
 

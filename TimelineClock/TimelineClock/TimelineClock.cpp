@@ -1,16 +1,16 @@
-#include "TimeLineClock.h"
+#include "TimelineClock.h"
 
 #include <Windows.h>
 
-TimeLineClock::TimeLineClock()
+TimelineClock::TimelineClock()
 	:m_framesPerSecond(60), m_fScale(1.0f), m_frameInterval(1.0f/60), m_bIsPause(true), m_bIsInit(false)
 {
 }
 
-TimeLineClock::~TimeLineClock()
+TimelineClock::~TimelineClock()
 {}
 
-bool TimeLineClock::Init(int32 framePerSecond)
+bool TimelineClock::Init(int32 framePerSecond)
 {
 	this->SetFPS(framePerSecond);
 
@@ -26,7 +26,7 @@ bool TimeLineClock::Init(int32 framePerSecond)
 	return true;
 }
 
-void TimeLineClock::Start()
+void TimelineClock::Start()
 {
 	if(!m_bIsInit)
 	{
@@ -41,7 +41,7 @@ void TimeLineClock::Start()
 	m_bIsPause = false;
 }
 
-float64 TimeLineClock::Step()
+float64 TimelineClock::Step()
 {
 	if(m_bIsPause){
 		return 0;
@@ -64,12 +64,12 @@ float64 TimeLineClock::Step()
 	return dt;
 }
 
-void TimeLineClock::SetScale(float32 value)
+void TimelineClock::SetScale(float32 value)
 {
 	m_fScale = value;
 }
 
-void TimeLineClock::SetFPS(int32 value)
+void TimelineClock::SetFPS(int32 value)
 {
 	m_framesPerSecond = value; 
 	m_frameInterval = 1.0f / m_framesPerSecond;
